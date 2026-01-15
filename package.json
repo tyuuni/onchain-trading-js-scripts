@@ -1,0 +1,39 @@
+{
+    "name": "onchain-trading-js-scripts",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tyuuni/onchain-trading-js-scripts.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/tyuuni/onchain-trading-js-scripts/issues"
+    },
+    "homepage": "https://github.com/tyuuni/onchain-trading-js-scripts#readme",
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.3.3",
+        "@eslint/js": "^9.39.2",
+        "@types/node": "^25.0.8",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.5",
+        "prettier": "^3.8.0",
+        "ts-loader": "^9.5.4",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.53.0"
+    },
+    "dependencies": {
+        "ethers": "^6.16.0"
+    }
+}
