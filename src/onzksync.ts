@@ -29,9 +29,9 @@ const play = async () => {
     console.log(
         'address:',
         wallet1.address,
-        '\tL1 balance:',
+        '\n\tL1 balance:',
         formatEther(ethBalanceL1),
-        '\tZK balance:',
+        '\n\tZK balance:',
         formatEther(ethBalance),
     );
 };

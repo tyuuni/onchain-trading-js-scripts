@@ -100,6 +100,7 @@ const sendEth = async (
 
 const play = async () => {
     const { shoudUseMainnet } = parseCommandLineArgs();
+    console.log('using network:', shoudUseMainnet ? 'mainnet' : 'sepolia');
     const network = shoudUseMainnet
         ? ChainNetwork.ETH_MAINNET
         : ChainNetwork.ETH_SEPOLIA;
