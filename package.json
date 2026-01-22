@@ -32,6 +32,7 @@
         "typescript-eslint": "^8.53.0"
     },
     "dependencies": {
+        "@nktkas/hyperliquid": "^0.30.3",
         "ethers": "^6.16.0",
         "zksync-ethers": "^6.21.0"
     }
