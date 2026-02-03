@@ -1,6 +1,11 @@
 import { ethers, formatEther } from 'ethers';
 import { Provider, utils, types, Wallet } from 'zksync-ethers';
-import { ChainNetwork, alchemyEndpoint, parseCommandLineArgs } from './config';
+import {
+    ChainNetwork,
+    alchemyEndpoint,
+    parseCommandLineArgs,
+    createJsonRpcProviderAndLogInfo,
+} from './config';
 
 const play = async () => {
     const { shoudUseMainnet } = parseCommandLineArgs();
@@ -11,7 +16,7 @@ const play = async () => {
     const provider = Provider.getDefaultProvider(
         shoudUseMainnet ? types.Network.Mainnet : types.Network.Sepolia,
     );
-    const ethProvider = ethers.getDefaultProvider(
+    const ethProvider = await createJsonRpcProviderAndLogInfo(
         alchemyEndpoint(
             shoudUseMainnet
                 ? ChainNetwork.ETH_MAINNET
