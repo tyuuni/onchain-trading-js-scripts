@@ -48,10 +48,11 @@ export const alchemyEndpoint = (network: ChainNetwork) => {
 
 export const parseCommandLineArgs = () => {
     let shoudUseMainnet = false;
-    const mainnetIndex = process.argv.findIndex(arg => arg === '-n');
+    const mainnetIndex = process.argv.findIndex(arg => arg.startsWith('-n'));
     if (
         mainnetIndex !== -1 &&
-        (process.argv[mainnetIndex + 1] || '') === 'mainnet'
+        (process.argv[mainnetIndex] === '-nmainnet' ||
+            (process.argv[mainnetIndex + 1] || '') === 'mainnet')
     ) {
         shoudUseMainnet = true;
     }
